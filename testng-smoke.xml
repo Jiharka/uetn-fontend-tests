@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="jcius-smoke-functional-tests" verbose="1" configfailurepolicy="continue">
+
+    <listeners>
+        <listener class-name="com.jcius.com.retry.AnnotationTransformer"/>
+        <listener class-name="com.jcius.com.utils.LoggerListener"/>
+    </listeners>
+    <test name="smoke">
+        <packages>
+            <package name="com.jcius.com.smoke.*"/>
+        </packages>
+    </test>
+</suite>
+

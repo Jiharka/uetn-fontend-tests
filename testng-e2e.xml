@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="jcius-e2e-functional-tests" verbose="1" configfailurepolicy="continue">
+
+    <listeners>
+        <listener class-name="com.jcius.com.retry.AnnotationTransformer"/>
+        <listener class-name="com.jcius.com.utils.LoggerListener"/>
+    </listeners>
+    <test name="e2e">
+        <packages>
+            <package name="com.jcius.com.e2e.*"/>
+        </packages>
+    </test>
+</suite>
+
